@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Global Time Zones</h1>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search time zone..." class="search-box">
+            <button onclick="addTimeZone()" class="add-btn">+ Add Time Zone</button>
+        </div>
+
+        <div id="timeZonesList" class="time-zones-list">
+            <!-- Time zone clocks will be added here -->
+        </div>
+
+        <div id="timeZoneModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Add Time Zone</h2>
+                <input type="text" id="timeZoneInput" placeholder="Search or enter time zone (e.g., America/New_York)">
+                <div id="suggestions" class="suggestions"></div>
+                <button onclick="confirmAddTimeZone()" class="btn-confirm">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
